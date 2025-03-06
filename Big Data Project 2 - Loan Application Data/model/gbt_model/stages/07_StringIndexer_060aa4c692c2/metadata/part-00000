@@ -1,0 +1,1 @@
+{"class":"org.apache.spark.ml.feature.StringIndexerModel","timestamp":1706877316280,"sparkVersion":"3.5.0","uid":"StringIndexer_060aa4c692c2","paramMap":{"inputCol":"credit_worthiness","outputCol":"credit_worthiness_index"},"defaultParamMap":{"stringOrderType":"frequencyDesc","handleInvalid":"error","outputCol":"StringIndexer_060aa4c692c2__output"}}
