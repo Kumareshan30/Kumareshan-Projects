@@ -5,21 +5,27 @@ This project analyzes loan applications using various machine learning models. T
 
 ## Folder Structure
 Loan_Application_Analysis/
-├── data/
+   ├── data/
 
-│   ├── application_data.csv      # Main dataset containing loan application details
+   │   ├── application_data.csv      # Main dataset containing loan application details
 
-│   ├── previous_application.csv  # Previous loan applications data (not uploaded due to size)
+   │   ├── previous_application.csv  # Previous loan applications data (not uploaded due to size)
 
-│   ├── value_dict.csv            # Metadata or mapping values for categorical data
+   │   ├── value_dict.csv            # Metadata or mapping values for categorical data
 
-│
-├── model/
-│   ├── [Various ML model files]  # Machine learning models trained for loan prediction
-│
-├── Loan_application_analysis.ipynb  # Jupyter Notebook with all relevant code
-├── README.md  # Project documentation
-├── requirements.txt  # Dependencies required to run the project
+   │
+   
+   ├── model/
+   
+   │   ├── [Various ML model files]  # Machine learning models trained for loan prediction
+   
+   │
+   
+   ├── Loan_application_analysis.ipynb  # Jupyter Notebook with all relevant code
+   
+   ├── README.md  # Project documentation
+   
+   ├── requirements.txt  # Dependencies required to run the project
 
 ## Installation
 Ensure you have Python installed (preferably Python 3.8 or above). Install the required dependencies using the following command:
