@@ -1,70 +1,61 @@
-# E-Commerce Data Analysis Using RDD, Dataframes and PySpark SQL
+# Urban Tree Data Visualization - Tableau Project
 
 ## Project Overview
-This project analyzes e-commerce transactions and customer behavior using machine learning techniques. The goal is to gain insights into customer purchasing patterns, payment behaviors, and transaction statuses. Additionally, this project aims to test and compare the performance of RDDs, DataFrames, and PySpark SQL in processing large-scale e-commerce data.
+This Tableau project analyzes urban tree data to uncover patterns in tree species distribution, planting trends, and location-based insights. The dataset contains detailed records of tree species, planting years, and geographic locations. The project provides interactive visualizations to explore:
+- The spatial distribution of tree species
+- Trends in tree planting over time
+- The relationship between tree species and planting locations
+
 
 ## Folder Structure
-Loan_Application_Analysis/
+Tableau Project 1- Urban Trees Visualization/
 
-   ├── data/
-
-   │   ├── application_data.csv      # Main dataset containing loan application details
-
-   │   ├── previous_application.csv  # Previous loan applications data (not uploaded due to size)
-
-   │   ├── value_dict.csv            # Metadata or mapping values for categorical data
+   ├── PE1-trees-data-v2.csv      # Main dataset containing tree data
       
-   ├── Ecommerce_analysis.ipynb  # Jupyter Notebook with all relevant code
+   ├── Urban_Tree_Data_Visualization.twb  # Tableau workbook containing all dashboards
    
    ├── README.md  # Project documentation
    
-   ├── requirements.txt  # Dependencies required to run the project
 
 ## Installation
-Ensure you have Python installed (preferably Python 3.8 or above). Install the required dependencies using the following command:
-```sh
-pip install -r requirements.txt 
-```
-
-## Usage
-1. Unzip data.zip file
-2. Open the Jupyter Notebook:
-```sh
-   jupyter notebook Ecommerce_analysis.ipynb
-```
-
-3. Execute the cells step by step to analyze customer transactions, purchase trends, model predictions, and compare RDDs, DataFrames, and PySpark SQL.
+To view and interact with the Tableau dashboards, install Tableau Public or Tableau Desktop:
+1. Download Tableau Public: https://public.tableau.com/en-us/s/download
+2. Open Urban_Tree_Data_Visualization.twb in Tableau.
 
 ## Dataset Description
-- **application_data.csv**: Contains details of e-commerce transactions, including order amounts, payment methods, transaction approvals, and rejection reasons.
-- **previous_application.csv**:  Historical transaction records.
-- **value_dict.csv**: Mapping file for categorical values used in datasets.
+- **PE1-trees-data-v2.csv**: The dataset includes information on urban trees, such as:
+  - **Common Name**: The species of the tree.
+  - **Scientific Name**: Botanical name of the species.
+  - **Genus & Family**: Taxonomic classification.
+  - **Date Planted & Year Planted**: Planting history.
+  - **Age Description**: Categorization of tree maturity.
+  - **Longitude & Latitude**: Geographic coordinates of trees.
+  - **Located In**: Whether the tree is in a park, street, or other location.
+
 
 ## Results & Analysis
+The Tableau workbook contains the following dashboards and insights:
 
-The Jupyter Notebook includes the following sections:
+### 1. Data Cleaning and Anomaly Detection
+- **Textual Data Errors in Common Names**: Special characters were present in some tree names. This was resolved using a find-and-replace method.
+- **Longitudinal Errors in Plant Location**: A tree was found outside Melbourne, which was an error in data collection and was removed.
+- **Future Dated Entries**: A Callery Pear tree was recorded as planted in 2024, which is impossible. This record was ignored.
 
-### 1. Data Cleaning & Preprocessing
+### 2. Tree Planting Trends Over Time
+- **Genus Types Planted Each Year** (Fig 5): The number of trees planted from different Genus groups was analyzed.
+  - Post-2005, the number of trees planted annually became stable, especially in Ulmus, Quercus, Croymbia, and Platanus groups.
+  - Eucalyptus saw a peak in 2013 but fluctuated between 500-1000 annually after that.
+  - Pre-2004, tree planting was more erratic but at a significantly higher volume.
+- **Yearly Trends in Tree Planting** (Fig 6): Overlaid discrete line graphs confirmed that post-2005 tree planting volumes were a fraction of pre-2004 levels.
+- **Running Sum of Trees Planted per Genus** (Fig 7):
+  - Eucalyptus was found to be the most planted genus, making up nearly 33% of all trees.
+  - Other Genus groups, except "Other," never exceeded 5000 trees in total.
 
-- Handling missing values and incorrect data entries.
-- Encoding categorical features appropriately.
-
-### 2. Exploratory Data Analysis (EDA)
-
-- Visualizing transaction volume and customer purchase patterns.
-- Analyzing correlations between order values, payment types, and approval rates.
-
-### 3. RDDs vs DataFrames vs PySpark SQL Comparison
-
-- Implementing queries using RDDs, DataFrames, and PySpark SQL.
-- Measuring and comparing execution times.
-- Analyzing performance differences and discussing trade-offs.
-
-### 4. Business Insights & Recommendations
-
-- **Total Approved Loan Amount per Year and Month**: Analyzed historical loan data to determine loan approval trends.
-- **Income Analysis by Education Type**: Computed the average income per education category to understand financial behavior.
-- **Credit Request Analysis**: Filtered applicants with low credit scores from the past year.
-- **Age-Based Property and Car Ownership**: Examined how age influences property and vehicle ownership.
-- **Gender-Based Loan Approvals Over Time**: Created visualizations to explore gender-based approval trends.
-- **Scatter Plot Analysis**: Studied the relationship between applicant age and total approved credit, using log scales where necessary.
+### 3. Spatial Distribution of Trees
+- **Tree Locations Across Melbourne** (Fig 8):
+  - Eucalyptus is concentrated in central city areas.
+  - Croymbia is more dominant near water bodies.
+- **Location Preference of Genus Groups** (Fig 9):
+  - Eucalyptus is commonly planted in parks.
+  - Platanus is predominantly found on streets.
+  - These spatial distributions do not impact the overall conclusions about planting trends.
