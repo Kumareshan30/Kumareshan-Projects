@@ -6,9 +6,13 @@ This project analyzes loan applications using various machine learning models. T
 ## Folder Structure
 Loan_Application_Analysis/
 ├── data/
+
 │   ├── application_data.csv      # Main dataset containing loan application details
+
 │   ├── previous_application.csv  # Previous loan applications data (not uploaded due to size)
+
 │   ├── value_dict.csv            # Metadata or mapping values for categorical data
+
 │
 ├── model/
 │   ├── [Various ML model files]  # Machine learning models trained for loan prediction
