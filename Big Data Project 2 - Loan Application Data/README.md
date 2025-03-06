@@ -14,14 +14,10 @@ Loan_Application_Analysis/
 
    │   ├── value_dict.csv            # Metadata or mapping values for categorical data
 
-   │
-   
    ├── model/
    
    │   ├── [Various ML model files]  # Machine learning models trained for loan prediction
-   
-   │
-   
+      
    ├── Loan_application_analysis.ipynb  # Jupyter Notebook with all relevant code
    
    ├── README.md  # Project documentation
