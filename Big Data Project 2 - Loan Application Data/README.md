@@ -34,14 +34,14 @@ pip install -r requirements.txt
 1. Unzip data.zip file
 2. Open the Jupyter Notebook:
 ```sh
-   jupyter notebook Loann_application_analysis.ipynb
+   jupyter notebook Loan_application_analysis.ipynb
 ```
 
 3. Run the cells step by step to explore data preprocessing, model training, and evaluation.
 
 ## Dataset Description
 - **application_data.csv**: Contains details of loan applications, including applicant income, credit amount, down payment, contract status, and decision timelines.
-- **previous_application.csv**: Historical records of previous loan applications (not uploaded due to size).
+- **previous_application.csv**: Historical records of previous loan applications.
 - **value_dict.csv**: Mapping file for categorical values used in datasets.
 
 ## Results & Analysis
